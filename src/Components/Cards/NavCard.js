@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CreateIcon from '@material-ui/icons/Create';
+import IconButton from '@material-ui/core/IconButton';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import './NavCard.css';
 
 const useStyles = makeStyles({
@@ -33,12 +35,14 @@ export default function NavCard() {
     <Card className={classes.root}>
       <CardContent>
           <Typography inline align="left" variant="h5" component="h2">
-            <Grid constainer style={{width: "100%"}}>
-            <div style={{display: "inline"}}>
+            <Grid container style={{width: "100%", height: "28px"}}>
+            {/* <div style={{display: "inline", width: "100%"}}> */}
+            <div style={{width: "98%", height: "28px"}}>
               <strong>Fab Hotel Prime Ivory Pearl II</strong>
               <font style={{marginLeft: "2%", fontSize: '60%', backgroundColor: '#E3E3E3', padding: '0.25%'}}>ID 1753</font>
             </div>
-            <div style={{marginLeft: "auto", display: "inline"}}><CreateIcon /></div>
+            <div style={{width: "2%", height: "28px"}}><IconButton style={{color: "#8D8D8D"}}><CreateIcon /></IconButton></div>
+            {/* </div> */}
             </Grid>
           </Typography>
         <Typography className={classes.pos} color="textSecondary">
@@ -56,7 +60,7 @@ export default function NavCard() {
             </div>
             <div>
               <div>
-                <strong>Fab Budget</strong>
+                <strong>Fab Budget       </strong>
                 <font style={{fontSize: '80%', backgroundColor: '#F8C245'}}><strong>GOLD</strong></font>
               </div>
               <div><font color="#A7A7A7">Product</font></div>
@@ -115,8 +119,8 @@ export default function NavCard() {
             </div>
           </Grid>
           <Grid container alignItems="center" style={{paddingBottom: '0%', width: '100%'}} >
-            <div>
-              <Button size="small"><font color="#A7A7A7">View Less</font></Button>
+            <div style={{width: "100%", textAlign: "center"}}>
+              <Button size="small" style={{color: "#A7A7A7"}}>View Less<ExpandLessIcon style={{color: "#f50057"}} /></Button>
             </div>
           </Grid>
         </Typography>

@@ -1,14 +1,49 @@
 .DrawerLogo {
-    height: 60px;
+    height: 40px;
     padding: 0;
-    margin: 0
+    margin: 0;
+}
+
+.DrawerSmallLogo {
+    height: 50px;
+    padding: 2%;
+    margin-left: 6%;
+    margin-top: 2%;
 }
 
 .IconGroupRight {
     margin-left: auto;
     display: inline;
+    /* display: inline-flex; */
+    width:30%;
 }
 
 .IconRight {
-    padding: 0 2%;
+    background-color: #f2f2f2;
+    margin: 0 5%;
+    padding: 0 5%;
+    /* background: #F2F2F2 0% 0% no-repeat padding-box; */
+    color: #000000;
+}
+
+.circle-icon-bell {
+    background: #F2F2F2;
+    min-width: 45px;
+    height: 39px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 6px 2px;
+}
+
+.circle-icon-person {
+    background: #F2F2F2;
+    min-width: 45px;
+    height: 39px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 6px 10px;
 }

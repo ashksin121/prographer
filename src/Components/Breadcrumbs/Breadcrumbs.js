@@ -21,7 +21,7 @@ export default function BreadCrumbs() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{fontSize: "16px"}}>
       <Breadcrumbs separator="›" aria-label="breadcrumb">
         <Link color="inherit" href="/" onClick={handleClick}>
           Home

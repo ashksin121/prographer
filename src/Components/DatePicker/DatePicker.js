@@ -17,7 +17,7 @@ export default function DatePicker({pickerLabel}) {
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <KeyboardDatePicker
-          margin="normal"
+          margin="none"
           id={pickerLabel}
           label={pickerLabel}
           format="MM/dd/yyyy"

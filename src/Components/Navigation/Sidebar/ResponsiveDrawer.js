@@ -16,11 +16,15 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import UpperCard from '../../../Containers/UpperCard/UpperCard';
 import Logo from '../../../Assets/Images/logo.png';
+import SmallLogo from '../../../Assets/Images/Prographer-Small-Logo.svg';
 import BreadCrumbs from '../../Breadcrumbs/Breadcrumbs';
 import PersonIcon from '@material-ui/icons/Person';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import NotificationsRoundedIcon from '@material-ui/icons/NotificationsRounded';
+import Icon from '@material-ui/core/Icon';
 import './ResponsiveDrawer.css';
 
 const drawerWidth = 240;
@@ -74,16 +78,25 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar}>
+        <img src={SmallLogo} className="DrawerSmallLogo" alt="SmallLogo" />
         <img src={Logo} className="DrawerLogo" alt="Logo" />
       </div>
       <Divider />
       <List>
-        {['Dashboard', 'Photoshoot'].map((text, index) => (
+        {/* {['Dashboard', 'Photoshoot'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon style={{color: "#FFFFFF"}}>{index % 2 === 0 ? <DashboardIcon /> : <CameraAltIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
-        ))}
+        ))} */}
+        <ListItem button key="Dashboard" style={{backgroundColor: "#161153"}}>
+            <ListItemIcon style={{color: "#EA4D23"}}><DashboardIcon /></ListItemIcon>
+            <ListItemText primary="Dashboard" />
+        </ListItem>
+        <ListItem button key="Photoshoot">
+            <ListItemIcon style={{color: "#FFFFFF"}}><CameraAltIcon /></ListItemIcon>
+            <ListItemText primary="Photoshoot" />
+        </ListItem>
       </List>
     </div>
   );
@@ -91,7 +104,7 @@ function ResponsiveDrawer(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar position="fixed" className={classes.appBar} elevation={0}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -103,18 +116,22 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6">
-              <div>
-                <div>Posted Shoot</div>
+              <div style={{width: "100%"}}>
+                <div style={{fontSize: "26px"}}>Posted Shoot</div>
                 <BreadCrumbs />
               </div>
           </Typography>
-          <div className="IconGroupRight">
-            <IconButton className="IconRight"><NotificationsIcon /></IconButton>
-            <IconButton className="IconRight"><PersonIcon /></IconButton>
-            <IconButton className="IconRight">Satyajit</IconButton>
+          <div className="IconGroupRight" align="right">
+          {/* <i class="fas fa-bell"></i> */}
+            <Icon className="IconRight circle-icon-bell"><NotificationsRoundedIcon style={{color: "#000000", margin: "0 2%"}} /></Icon>
+            <Icon className="IconRight circle-icon-person"><PersonIcon style={{color: "#000000"}} /></Icon>
+            {/* <IconButton className="IconRight"><Icon>add_circle</Icon></IconButton> */}
+            <IconButton className="IconRight" style={{fontSize: "19px", color: "#000000"}}>Satyajit<ArrowDropDownIcon style={{color: "#EA4D23"}} /></IconButton>
           </div>
         </Toolbar>
+        <Divider />
       </AppBar>
+      {/* <Divider /> */}
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
@@ -146,6 +163,7 @@ function ResponsiveDrawer(props) {
           </Drawer>
         </Hidden>
       </nav>
+      {/* <Divider /> */}
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography>

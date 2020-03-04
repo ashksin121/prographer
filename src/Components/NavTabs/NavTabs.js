@@ -66,12 +66,12 @@ export default function NavTabs() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          textColor="#000000"
           aria-label="full width tabs example"
+          inkBarStyle={{indicatorColor: "#EA4D23"}}
         >
-          <Tab label="Product Photoshoot" {...a11yProps(0)} />
-          <Tab label="Product Videography" {...a11yProps(1)} />
+          <Tab label="Product Photoshoot   01" {...a11yProps(0)} />
+          <Tab label="Product Videography   01" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -79,10 +79,10 @@ export default function NavTabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction} style={{backgroundColor: '#DBDBDB'}}>
+        <TabPanel value={value} index={0} dir={theme.direction} style={{backgroundColor: '#f5f5f5'}}>
           <NavCard />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction} style={{backgroundColor: '#DBDBDB'}}>
+        <TabPanel value={value} index={1} dir={theme.direction} style={{backgroundColor: '#f5f5f5'}}>
           <NavCard />
         </TabPanel>
       </SwipeableViews>
