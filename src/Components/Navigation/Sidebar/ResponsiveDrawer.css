@@ -1,0 +1,14 @@
+.DrawerLogo {
+    height: 60px;
+    padding: 0;
+    margin: 0
+}
+
+.IconGroupRight {
+    margin-left: auto;
+    display: inline;
+}
+
+.IconRight {
+    padding: 0 2%;
+}

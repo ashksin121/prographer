@@ -1,0 +1,8 @@
+.Sidebar {
+    top: 0px;
+    left: 0px;
+    width: 10%;
+    height: 100vh;
+    background: #282461 0% 0% no-repeat padding-box;
+    opacity: 1;
+}

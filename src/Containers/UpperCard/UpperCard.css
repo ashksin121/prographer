@@ -1,0 +1,20 @@
+.UpperCard {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    /* padding: 3% 3% 0 3%; */
+}
+
+.DropDownArea {
+    /* margin: 3%; */
+    background-color: #FFFFFF;
+    width: 80%;
+    padding: 3%;
+}
+
+.TabArea {
+    /* margin: 3%; */
+    padding-top: 0;
+    background-color: #dbdbdb;
+}
